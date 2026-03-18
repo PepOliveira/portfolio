@@ -1,42 +1,40 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageContext";
 import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
+  const { t } = useLanguage();
   const experiences = [
-    {
-      role: "Junior Software Developer",
-      company: "FUNAP Sorocaba",
-      period: "2024",
-      description:
-        "Atuação na manutenção e evolução do Sistema Eletrônico de Informações (SEI), utilizado para gestão de processos administrativos. Desenvolvimento de novas funcionalidades e correções com foco em estabilidade, além de monitoramento contínuo do sistema e suporte técnico. Colaboração direta com equipes administrativas, fortalecendo organização e responsabilidade técnica.",
-      tech: ["JavaScript", "React", "HTML", "CSS"],
-    },
-    {
-      role: "Junior Full Stack Developer",
-      company: "Lavanderia LaveClean",
-      period: "2024",
-      description:
-        "Responsável pela manutenção e evolução do sistema interno para gestão de estoque e operações. Desenvolvimento de funcionalidades tanto no frontend quanto no backend, além de integração com APIs e banco de dados, garantindo melhor desempenho e organização dos processos da empresa.",
-      tech: ["JavaScript", "Angular", "Node.js", "Spring Boot", "Database"],
-    },
-    {
-      role: "Junior Full Stack Developer",
-      company: "Projeto Freelancer",
-      period: "2024 - Atual",
-      description:
-        "Desenvolvimento de aplicações web completas utilizando React, Node.js e bancos de dados relacionais e NoSQL. Criação de APIs, integração de sistemas e foco em performance e experiência do usuário.",
-      tech: ["React", "Node.js", "TypeScript", "MySQL"],
-    },
-    {
-      role: "Desenvolvedor Backend",
-      company: "Projeto Acadêmico (TCC)",
-      period: "2025",
-      description:
-        "Desenvolvimento de um chatbot inteligente para apoio a pessoas com TEA, com foco em acessibilidade. Implementação de APIs REST, integração com IA e aplicação de boas práticas de segurança.",
-      tech: ["Java", "Spring Boot", "API REST", "OpenAI"],
-    },
-  ];
+  {
+    role: t.experience.items.funap.role,
+    company: t.experience.items.funap.company,
+    period: t.experience.items.funap.period,
+    description: t.experience.items.funap.description,
+    tech: ["JavaScript", "React", "HTML", "CSS"],
+  },
+  {
+    role: t.experience.items.laveClean.role,
+    company: t.experience.items.laveClean.company,
+    period: t.experience.items.laveClean.period,
+    description: t.experience.items.laveClean.description,
+    tech: ["JavaScript", "Angular", "Node.js", "Spring Boot", "Database"],
+  },
+  {
+    role: t.experience.items.freelancer.role,
+    company: t.experience.items.freelancer.company,
+    period: t.experience.items.freelancer.period,
+    description: t.experience.items.freelancer.description,
+    tech: ["React", "Node.js", "TypeScript", "MySQL"],
+  },
+  {
+    role: t.experience.items.tcc.role,
+    company: t.experience.items.tcc.company,
+    period: t.experience.items.tcc.period,
+    description: t.experience.items.tcc.description,
+    tech: ["Java", "Spring Boot", "API REST"],
+  },
+];
 
   return (
     <section className="mb-20 mt-20">
@@ -54,7 +52,7 @@ export default function Experience() {
           text-transparent
         "
       >
-        Experience
+        {t.experience.title}
       </h2>
 
       {/* TIMELINE */}

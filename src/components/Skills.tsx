@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 import {
   SiJavascript,
@@ -19,11 +20,13 @@ import {
   SiBootstrap,
   SiSpringboot,
   SiAngular,
+  SiFirebase,
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
 
 export default function StackIcons() {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState("All");
 
   const stackGroups = {
@@ -51,6 +54,7 @@ export default function StackIcons() {
     Database: [
       { icon: SiMysql, color: "#4479A1", name: "MySQL" },
       { icon: SiMongodb, color: "#47A248", name: "MongoDB" },
+      { icon: SiFirebase, color: "#a26b47", name: "Firebase" },
     ],
 
     Tools: [
@@ -80,7 +84,7 @@ export default function StackIcons() {
         bg-clip-text
         text-transparent
       ">
-        Tech Stack
+        {t.skills.title}
       </h2>
 
       {/* TABS */}
@@ -106,7 +110,14 @@ export default function StackIcons() {
               />
             )}
 
-            <span className="relative z-10">{tab}</span>
+            <span className="relative z-10">
+              {tab === "All" ? t.skills.tabs.all :
+               tab === "Languages" ? t.skills.tabs.languages :
+               tab === "Frontend" ? t.skills.tabs.frontend :
+               tab === "Backend" ? t.skills.tabs.backend :
+               tab === "Database" ? t.skills.tabs.database :
+               tab === "Tools" ? t.skills.tabs.tools : tab}
+            </span>
           </button>
         ))}
 

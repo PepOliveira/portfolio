@@ -43,7 +43,7 @@ export default function ExperienceCard({
         {period}
       </span>
 
-      <p className="text-sm text-zinc-400 mb-4 leading-relaxed">
+      <p className="text-sm text-zinc-400 mb-4 leading-relaxed" style={{ whiteSpace: 'pre-line' }}>
         {description}
       </p>
 

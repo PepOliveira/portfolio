@@ -2,10 +2,10 @@ import Sidebar from "./Sidebar";
 
 export default function Layout({ children }: any) {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen flex">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
       <Sidebar />
 
-      <main className="flex-1 max-w-7xl mx-auto px-8 py-12">
+      <main className="flex-1 max-w-7xl mx-auto px-8 py-12 lg:ml-64">
         {children}
       </main>
     </div>
