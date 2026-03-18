@@ -37,7 +37,7 @@ export default function Sidebar() {
           />
 
           <Image
-            src="/perfil.JPEG"
+            src="/perfil.jpeg"
             width={90}
             height={90}
             alt="Pedro Oliveira"
