@@ -37,7 +37,7 @@ export default function Sidebar() {
           />
 
           <Image
-            src="/WhatsApp Image 2026-02-25 at 16.59.26.JPEG"
+            src="/perfil.JPEG"
             width={90}
             height={90}
             alt="Pedro Oliveira"
