@@ -99,7 +99,7 @@ export default function Sidebar() {
 
           {/* CV BR */}
           <a
-            href="/Curriculo-Pedro-Oliveira.pdf"
+            href="/CurriculoPedroOliveiraDevJunior.pdf"
             className="
               flex items-center gap-3
               border border-gray-800
