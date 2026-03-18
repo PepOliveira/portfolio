@@ -115,7 +115,7 @@ export default function Sidebar() {
 
           {/* CV EUROPASS */}
           <a
-            href="/CV-Europass-Pedro-Portugal.pdf"
+            href="/CV-PEDROOLIVEIRA.pdf"
             className="
               flex items-center gap-3
               border border-gray-800
